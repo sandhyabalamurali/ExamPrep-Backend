@@ -8,7 +8,7 @@ import java.util.List;
 public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long sid;
+    private int sid;
     private String name;
     @Enumerated(EnumType.STRING)
     private ExamType examType;
@@ -16,7 +16,7 @@ public class Subject {
     private List<Chapter> chapters;
     public Subject(){
     }
-    public Subject(long sid, String name, ExamType examType) {
+    public Subject(int sid, String name, ExamType examType) {
         this.sid = sid;
         this.name = name;
         this.examType = examType;
@@ -26,7 +26,7 @@ public class Subject {
         return sid;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.sid = id;
     }
 
